@@ -7,3 +7,12 @@ C:\Users\Christian\Downloads\fractalsCS\fractalsCS\fractalsCS\obj\Debug\fractals
 C:\Users\Christian\Downloads\fractalsCS\fractalsCS\fractalsCS\obj\Debug\fractalsCS.csproj.GenerateResource.Cache
 C:\Users\Christian\Downloads\fractalsCS\fractalsCS\fractalsCS\obj\Debug\fractalsCS.exe
 C:\Users\Christian\Downloads\fractalsCS\fractalsCS\fractalsCS\obj\Debug\fractalsCS.pdb
+C:\Users\Christian\Documents\GitHub\AO-ela2\fractalsCS\bin\Debug\fractalsCS.exe.config
+C:\Users\Christian\Documents\GitHub\AO-ela2\fractalsCS\obj\Debug\fractalsCS.exe
+C:\Users\Christian\Documents\GitHub\AO-ela2\fractalsCS\obj\Debug\fractalsCS.pdb
+C:\Users\Christian\Documents\GitHub\AO-ela2\fractalsCS\bin\Debug\fractalsCS.exe
+C:\Users\Christian\Documents\GitHub\AO-ela2\fractalsCS\bin\Debug\fractalsCS.pdb
+C:\Users\Christian\Documents\GitHub\AO-ela2\fractalsCS\obj\Debug\fractalsCS.csprojResolveAssemblyReference.cache
+C:\Users\Christian\Documents\GitHub\AO-ela2\fractalsCS\obj\Debug\fractalsCS.Form1.resources
+C:\Users\Christian\Documents\GitHub\AO-ela2\fractalsCS\obj\Debug\fractalsCS.Properties.Resources.resources
+C:\Users\Christian\Documents\GitHub\AO-ela2\fractalsCS\obj\Debug\fractalsCS.csproj.GenerateResource.Cache

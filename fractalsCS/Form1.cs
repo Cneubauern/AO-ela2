@@ -78,21 +78,76 @@ namespace fractalsCS
         }
         private void starNew(Graphics g, int x, int y, int ratioRects)
         {
-            if (ratioRects > 0)
+            double Ang36 = Math.PI / 5.0;
+            double Ang72 = 2.0 * Ang36;
+            float sin36 = (float)Math.Sin(Ang36);
+            float sin72 = (float)Math.Sin(Ang72);
+            float cos36 = (float)Math.Cos(Ang36);
+            float cos72 = (float)Math.Cos(Ang72);
+
+           if (ratioRects > 0)
             {
                 int newRatio = ratioRects / 2;
-                star(g, x - newRatio, y + newRatio, newRatio);
+             
+                starNew(g, x , y - ratioRects, newRatio);
+                starNew(g, x - ratioRects, y + ratioRects, newRatio);
+                starNew(g, x + ratioRects, y + ratioRects, newRatio);
+                starNew(g, x - ratioRects, y, newRatio);
+                starNew(g, x + ratioRects, y, newRatio);
 
-                star(g, x - newRatio, y - newRatio, newRatio);
 
-                star(g, x + newRatio, y - newRatio, newRatio);
 
-                g.FillRectangle(br, x, y, ratioRects, ratioRects);
-                g.DrawRectangle(pen2, x, y, ratioRects, ratioRects);
+             //   starNew(g, x - newRatio, y - newRatio, newRatio);
+
+             //   starNew(g, x + newRatio, y - newRatio, newRatio);
+
+           //     g.FillRectangle(br, x, y, ratioRects, ratioRects);
+           //     g.DrawRectangle(pen2, x, y, ratioRects, ratioRects);
+
+                drawStar(g, x, y, ratioRects);
+
 
                 System.Threading.Thread.Sleep(sleepTime);
             }
         }
+        private void drawStar(Graphics g, int x, int y, int radius)
+        {
+            PointF[] Star = calculateStar(new PointF(x, y), radius, radius/3);
+            g.FillPolygon(brBl, Star);
+        }
+        private PointF[] calculateStar(PointF orig,float outerradius, float innerradius)
+        {
+            double Ang36 = Math.PI/5.0;
+            double Ang72 = 2.0 * Ang36;
+            float sin36 = (float)Math.Sin(Ang36);
+            float sin72 = (float)Math.Sin(Ang72);
+            float cos36 = (float)Math.Cos(Ang36);
+            float cos72 = (float)Math.Cos(Ang72);
+
+            PointF[] pnts = {orig,orig,orig,orig,orig,orig,orig,orig,orig,orig,};
+            pnts[0].Y -= outerradius;
+            pnts[1].X += innerradius * sin36;
+            pnts[1].Y -= innerradius * cos36;
+            pnts[2].X += outerradius * sin72;
+            pnts[2].Y -= outerradius * cos72;
+            pnts[3].X += innerradius * sin72 ;
+            pnts[3].Y += innerradius * cos72 ;
+            pnts[4].X += outerradius * sin36;
+            pnts[4].Y += outerradius * cos36;
+            
+            pnts[5].Y += innerradius;
+            
+            pnts[6].X -= outerradius * sin36;
+            pnts[6].Y += outerradius * cos36;
+            pnts[7].X -= innerradius * sin72;
+            pnts[7].Y += innerradius * cos72;
+            pnts[8].X -= outerradius * sin72;
+            pnts[8].Y -= outerradius * cos72;
+            pnts[9].X -= innerradius * sin36;
+            pnts[9].Y -= innerradius * cos36;
+            return pnts;
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
